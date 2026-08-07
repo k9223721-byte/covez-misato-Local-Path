@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>コース・料金｜城南コベッツ 三郷中央駅前教室</title>
+<link rel="stylesheet" href="_common.css">
+<style>
+.page-hero { background:linear-gradient(135deg,#0F3D7A,#1A5CA8); color:#fff; padding:56px 24px; text-align:center; }
+.page-hero h1 { font-size:clamp(1.6rem,4vw,2.4rem); font-weight:900; }
+
+.grade-tabs { display:flex; gap:8px; margin-bottom:32px; flex-wrap:wrap; }
+.grade-tab { padding:10px 20px; border-radius:99px; font-weight:700; font-size:0.88rem; border:2px solid var(--blue); color:var(--blue); cursor:pointer; transition:all 0.18s; }
+.grade-tab.active,.grade-tab:hover { background:var(--blue); color:#fff; }
+
+.course-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-bottom:40px; }
+.course-card { border-radius:var(--radius); border:2px solid var(--light); padding:24px; transition:border-color 0.2s; }
+.course-card:hover { border-color:var(--blue); }
+.course-card.hot { border-color:var(--blue); position:relative; }
+.course-hot-badge { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--blue); color:#fff; font-size:0.7rem; font-weight:700; padding:3px 14px; border-radius:99px; white-space:nowrap; }
+.course-grade { font-size:0.75rem; color:var(--mid); margin-bottom:4px; }
+.course-name { font-size:1rem; font-weight:900; margin-bottom:12px; }
+.course-subjects { display:flex; flex-wrap:wrap; gap:4px; margin-bottom:16px; }
+.course-subject { background:var(--blue-l); color:var(--blue-d); font-size:0.7rem; padding:2px 8px; border-radius:4px; font-weight:700; }
+.course-price { font-family:'Montserrat',sans-serif; font-size:1.6rem; font-weight:900; color:var(--ink); }
+.course-price small { font-family:'Noto Sans JP',sans-serif; font-size:0.75rem; font-weight:400; color:var(--mid); }
+.course-note { font-size:0.78rem; color:var(--mid); margin-top:8px; line-height:1.7; }
+
+.price-note-box { background:var(--light); border-radius:var(--radius); padding:20px 24px; font-size:0.82rem; color:var(--mid); line-height:1.9; margin-top:8px; }
+
+.faq-list { display:flex; flex-direction:column; gap:12px; }
+.faq-item { background:var(--white); border-radius:var(--radius); box-shadow:var(--shadow); overflow:hidden; }
+.faq-q { padding:16px 20px; font-weight:700; cursor:pointer; display:flex; justify-content:space-between; align-items:center; }
+.faq-q::after { content:'＋'; color:var(--blue); font-size:1.2rem; }
+.faq-q.open::after { content:'−'; }
+.faq-a { padding:0 20px; max-height:0; overflow:hidden; transition:max-height 0.3s ease, padding 0.3s; font-size:0.88rem; color:var(--mid); line-height:1.8; }
+.faq-a.open { max-height:200px; padding:0 20px 16px; }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <span class="section-tag" style="background:rgba(255,255,255,0.15);color:#fff;">COURSE & FEE</span>
+  <h1>コース・料金</h1>
+  <p>小学生から高校生・浪人生まで。1科目から始められます。</p>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+
+    <div class="reveal">
+      <span class="section-tag">COURSE</span>
+      <h2 class="section-title">対応コース一覧</h2>
+      <p class="section-lead">学年・目標に合わせてお選びください。組み合わせも自由です。</p>
+    </div>
+
+    <div class="course-grid">
+      <div class="course-card reveal">
+        <div class="course-grade">小学1年生〜6年生</div>
+        <div class="course-name">小学生コース</div>
+        <div class="course-subjects">
+          <span class="course-subject">国語</span><span class="course-subject">算数</span>
+          <span class="course-subject">理科</span><span class="course-subject">社会</span>
+          <span class="course-subject">英語</span>
+        </div>
+        <div class="course-price">要相談<small> / 月</small></div>
+        <div class="course-note">中学受験対策・学習習慣の定着・英語の先取りなど目標に合わせて設計</div>
+      </div>
+
+      <div class="course-card hot reveal">
+        <div class="course-hot-badge">人気No.1</div>
+        <div class="course-grade">中学1年生〜3年生</div>
+        <div class="course-name">中学生コース<br>（成績保証あり）</div>
+        <div class="course-subjects">
+          <span class="course-subject">英語</span><span class="course-subject">数学</span>
+          <span class="course-subject">国語</span><span class="course-subject">理科</span>
+          <span class="course-subject">社会</span>
+        </div>
+        <div class="course-price">要相談<small> / 月</small></div>
+        <div class="course-note">定期テスト＋25点保証付き。高校受験対策・内申点アップに対応</div>
+      </div>
+
+      <div class="course-card reveal">
+        <div class="course-grade">高校1年生〜3年生・浪人生</div>
+        <div class="course-name">高校生・大学受験コース</div>
+        <div class="course-subjects">
+          <span class="course-subject">英語</span><span class="course-subject">数学</span>
+          <span class="course-subject">国語</span><span class="course-subject">理科</span>
+          <span class="course-subject">地歴公民</span>
+        </div>
+        <div class="course-price">要相談<small> / 月</small></div>
+        <div class="course-note">国公立・私大・推薦・総合型選抜まで幅広く対応。共通テスト対策も</div>
+      </div>
+
+      <div class="course-card reveal">
+        <div class="course-grade">小学生〜高校生</div>
+        <div class="course-name">AI学習コース（atama+）</div>
+        <div class="course-subjects">
+          <span class="course-subject">数学</span><span class="course-subject">英語</span>
+          <span class="course-subject">理科</span>
+        </div>
+        <div class="course-price">要相談<small> / 月</small></div>
+        <div class="course-note">AIが苦手の原因を特定して最適な問題を提示。効率的に学力アップ</div>
+      </div>
+    </div>
+
+    <div class="price-note-box reveal">
+      ※ 料金は受講科目数・週のコマ数によって異なります。詳しくは無料体験授業の際にご説明します。<br>
+      ※ 入学金：0円　※ 教材費：別途　※ 1科目からの受講OK　※ 振替制度あり<br>
+      ※ 月途中・年度途中からの入塾も可能です。
+    </div>
+
+    <!-- FAQ -->
+    <div style="margin-top:56px" class="reveal">
+      <span class="section-tag">FAQ</span>
+      <h2 class="section-title">よくある<em>ご質問</em></h2>
+    </div>
+
+    <div class="faq-list">
+      <div class="faq-item reveal">
+        <div class="faq-q">入学金はかかりますか？</div>
+        <div class="faq-a">入学金は無料です。費用がかかるのは受講料と教材費のみです。まずはお気軽にご相談ください。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">1科目だけの受講はできますか？</div>
+        <div class="faq-a">はい、1科目からの受講が可能です。苦手科目だけ通うことも、受験に向けて複数科目受講することも、ご希望に応じて柔軟に対応します。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">部活で忙しいのですが大丈夫ですか？</div>
+        <div class="faq-a">大丈夫です。曜日・時間を自由に設定できる上、振替制度もございます。部活の大会や学校行事に合わせてスケジュール調整が可能です。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">成績保証制度の詳細を教えてください。</div>
+        <div class="faq-a">中学生対象の制度で、入塾から一定期間後の定期テストで対象科目の合計点が25点以上アップしなければ、授業料を返金する制度です。詳細は体験授業の際にご説明します。</div>
+      </div>
+      <div class="faq-item reveal">
+        <div class="faq-q">オンライン授業は対応していますか？</div>
+        <div class="faq-a">はい、オンライン授業にも対応しています。体調不良や急な予定変更時にもオンラインで受講できるため、学習の継続が可能です。</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="cta-bar">
+  <h2>料金の詳細は<em>無料体験授業</em>でご説明します。</h2>
+  <p>お子さまの状況をお伺いした上で、最適なプランをご提案します。</p>
+  <a href="trial.html" class="btn btn-primary">無料体験授業に申し込む</a>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="_layout.js"></script><script src="_common.js"></script>
+<script>
+document.querySelectorAll('.faq-q').forEach(q => {
+  q.addEventListener('click', () => {
+    q.classList.toggle('open');
+    q.nextElementSibling.classList.toggle('open');
+  });
+});
+</script>
+</body></html>

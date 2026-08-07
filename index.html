@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>城南コベッツ 三郷中央駅前教室｜個別指導・成績保証の学習塾</title>
+<link rel="stylesheet" href="_common.css">
+<style>
+.hero {
+  background: linear-gradient(135deg, #0F3D7A 0%, #1A5CA8 55%, #2B7ED4 100%);
+  color: #fff; padding: 80px 24px 100px; position: relative; overflow: hidden;
+}
+.hero::after {
+  content:''; position:absolute; right:-80px; bottom:-80px;
+  width:400px; height:400px; border-radius:50%;
+  background: rgba(255,255,255,0.04); pointer-events:none;
+}
+.hero-inner { max-width:960px; margin:0 auto; position:relative; z-index:1; }
+.hero-badge {
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--yellow); color:var(--ink);
+  font-size:0.78rem; font-weight:700; padding:5px 16px; border-radius:99px;
+  margin-bottom:20px;
+}
+.hero h1 { font-size:clamp(1.9rem,5vw,3rem); font-weight:900; line-height:1.25; margin-bottom:18px; }
+.hero h1 em { color:var(--yellow); font-style:normal; }
+.hero-sub { font-size:1rem; opacity:0.88; margin-bottom:32px; line-height:1.9; max-width:560px; }
+.hero-btns { display:flex; gap:12px; flex-wrap:wrap; }
+.hero-points {
+  display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:48px;
+}
+.hero-point {
+  background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.18);
+  border-radius:var(--radius); padding:16px;
+}
+.hero-point .num { font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:var(--yellow); display:block; line-height:1; }
+.hero-point .lbl { font-size:0.78rem; opacity:0.8; margin-top:4px; }
+
+/* STATS */
+.stats { background:var(--ink); }
+.stats-inner { max-width:960px; margin:0 auto; display:flex; }
+.stat { flex:1; padding:20px 16px; text-align:center; border-right:1px solid #333; }
+.stat:last-child { border-right:none; }
+.stat-n { font-family:'Montserrat',sans-serif; font-size:2rem; font-weight:900; color:var(--yellow); display:block; line-height:1.1; }
+.stat-l { font-size:0.72rem; color:#999; margin-top:4px; }
+
+/* FEATURE CARDS */
+.feat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:20px; }
+.feat-card { border-radius:var(--radius); padding:28px 24px; box-shadow:var(--shadow); border-top:4px solid var(--blue); background:var(--white); transition:transform 0.2s; }
+.feat-card:hover { transform:translateY(-4px); }
+.feat-icon { font-size:2rem; margin-bottom:12px; }
+.feat-card h3 { font-size:1rem; font-weight:900; margin-bottom:8px; }
+.feat-card p { font-size:0.85rem; color:var(--mid); line-height:1.8; }
+
+/* VOICE PREVIEW */
+.voices { background:var(--light); }
+.voice-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+.voice-card { background:var(--white); border-radius:var(--radius); padding:20px; box-shadow:var(--shadow); }
+.voice-card .stars { color:var(--yellow); font-size:1rem; margin-bottom:8px; }
+.voice-card .text { font-size:0.88rem; color:var(--ink); line-height:1.8; margin-bottom:10px; }
+.voice-card .who { font-size:0.75rem; color:var(--mid); }
+
+@media(max-width:600px){ .hero-points{grid-template-columns:1fr 1fr;} .stats-inner{flex-wrap:wrap;} .stat{flex:0 0 50%;border-right:none;border-bottom:1px solid #333;} }
+
+/* 春募集バナー */
+.haru-banner {
+  background: linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #E8751A 100%);
+  padding: 20px 24px; position: relative; overflow: hidden;
+}
+.haru-banner::before {
+  content: '🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸';
+  position: absolute; top: 4px; left: 0; right: 0;
+  font-size: 0.7rem; letter-spacing: 4px; opacity: 0.2;
+  white-space: nowrap; overflow: hidden; pointer-events: none;
+}
+.haru-banner-inner {
+  max-width: 960px; margin: 0 auto;
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+}
+.haru-label {
+  background: #fff; color: #C0392B;
+  font-size: 0.72rem; font-weight: 900;
+  padding: 4px 12px; border-radius: 99px; white-space: nowrap;
+}
+.haru-text { color: #fff; font-size: 1rem; flex: 1; min-width: 200px; }
+.haru-grade {
+  background: #F5C518; color: #1A1A1A;
+  font-weight: 900; padding: 1px 8px; border-radius: 4px;
+  margin-right: 6px; font-size: 1.05rem;
+}
+.haru-text strong { font-size: 1.1rem; }
+.haru-sub { color: rgba(255,255,255,0.85); font-size: 0.78rem; width: 100%; margin-top: -8px; }
+.haru-btn {
+  background: #F5C518; color: #1A1A1A;
+  font-weight: 900; font-size: 0.88rem;
+  padding: 10px 20px; border-radius: 99px;
+  white-space: nowrap; transition: transform 0.18s; text-decoration: none;
+}
+.haru-btn:hover { transform: scale(1.05); }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">📚 三郷市の個別指導No.1を目指す教室</div>
+    <h1>成績を上げたいなら、<br><em>一人ひとりの塾</em>へ。</h1>
+    <p class="hero-sub">
+      城南コベッツ三郷中央駅前教室は、1対2の個別指導で<br>
+      小学生〜高校生・浪人生まで幅広く対応。<br>
+      定期テスト＋25点保証で、確実に結果を出します。
+    </p>
+    <div class="hero-btns">
+      <a href="trial.html" class="btn btn-primary">無料体験授業に申し込む</a>
+      <a href="feature.html" class="btn" style="border:2px solid rgba(255,255,255,0.5);color:#fff;">指導の特徴を見る</a>
+    </div>
+    <div class="hero-points">
+      <div class="hero-point"><span class="num">+25点</span><div class="lbl">定期テスト成績保証（中学生）</div></div>
+      <div class="hero-point"><span class="num">1対2</span><div class="lbl">完全個別指導スタイル</div></div>
+      <div class="hero-point"><span class="num">0円</span><div class="lbl">入学金・無料体験授業</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-n">小〜高</span><div class="stat-l">全学年対応</div></div>
+    <div class="stat"><span class="stat-n">5科目</span><div class="stat-l">全教科指導</div></div>
+    <div class="stat"><span class="stat-n">振替OK</span><div class="stat-l">部活・習い事と両立</div></div>
+    <div class="stat"><span class="stat-n">自習室</span><div class="stat-l">無料開放</div></div>
+  </div>
+</div>
+
+<!-- 春募集バナー -->
+<div class="haru-banner">
+  <div class="haru-banner-inner">
+    <div class="haru-label">🌸 春の新学期 先行募集</div>
+    <div class="haru-text">
+      <span class="haru-grade">中1・中2生</span>限定
+      <strong>今なら入学金0円＋初月授業料半額！</strong>
+    </div>
+    <div class="haru-sub">新学期のスタートダッシュを城南コベッツで。残席わずか・先着順</div>
+    <a href="haru2025.html" class="haru-btn">詳しく見る・申し込む →</a>
+  </div>
+</div>
+
+<!-- 特徴 -->
+<section class="section">
+
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag">FEATURE</span>
+      <h2 class="section-title">三郷中央駅前教室が<em>選ばれる理由</em></h2>
+      <p class="section-lead">お子さまの「心」に真摯に向き合う指導で、確実に成績を伸ばします。</p>
+    </div>
+    <div class="feat-grid">
+      <div class="feat-card reveal">
+        <div class="feat-icon">🎯</div>
+        <h3>定期テスト+25点保証</h3>
+        <p>中学生対象の成績保証制度。目標点に届かなければ授業料を返金。結果にコミットします。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">👤</div>
+        <h3>1対2の完全個別指導</h3>
+        <p>担当講師がお子さまの理解度・目標に合わせてカリキュラムを設計。学校の進度に合わせた授業を行います。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">📅</div>
+        <h3>自由なスケジュール</h3>
+        <p>曜日・時間・科目をすべて自由に選択可能。振替制度で部活や習い事との両立も安心です。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">🤖</div>
+        <h3>AI×個別指導（atama+）</h3>
+        <p>AIが苦手の原因を分析し、最短ルートで実力アップ。プログラミング指導・オンライン授業にも対応。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">📊</div>
+        <h3>毎回の指導報告</h3>
+        <p>授業後に指導内容を保護者へ報告。三者面談・LINEでの連絡で、学習状況をいつも把握できます。</p>
+      </div>
+      <div class="feat-card reveal">
+        <div class="feat-icon">🏫</div>
+        <h3>自習室を無料開放</h3>
+        <p>授業のない日も自習室を無料で利用可能。わからない問題はすぐ講師に質問できる環境です。</p>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:36px">
+      <a href="feature.html" class="btn btn-outline">指導の特徴をもっと見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- 口コミプレビュー -->
+<section class="section voices">
+  <div class="section-inner">
+    <div class="reveal">
+      <span class="section-tag">VOICE</span>
+      <h2 class="section-title">通塾生・<em>保護者の声</em></h2>
+      <p class="section-lead">実際に通っている生徒・保護者からのリアルな声をご紹介します。</p>
+    </div>
+    <div class="voice-grid">
+      <div class="voice-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="text">「苦手だった数学が、先生のわかりやすい説明のおかげで得意科目に変わりました。テストで20点以上アップしました！」</p>
+        <div class="who">中学2年生・保護者</div>
+      </div>
+      <div class="voice-card reveal">
+        <div class="stars">★★★★★</div>
+        <p class="text">「部活が忙しくても振替できるので続けられています。先生に気軽に質問できる雰囲気がとても良いです。」</p>
+        <div class="who">高校1年生</div>
+      </div>
+      <div class="voice-card reveal">
+        <div class="stars">★★★★☆</div>
+        <p class="text">「定期テスト前の対策授業が特に充実していて、志望校に合格することができました。先生方に感謝です。」</p>
+        <div class="who">中学3年生・保護者</div>
+      </div>
+    </div>
+    <div style="text-align:center;margin-top:28px">
+      <a href="voice.html" class="btn btn-outline">合格実績・口コミをもっと見る →</a>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-bar">
+  <h2>まずは<em>無料体験授業</em>から。</h2>
+  <p>勉強の悩み・学校のこと、なんでもご相談ください。毎日受付中！</p>
+  <a href="trial.html" class="btn btn-primary" style="font-size:1.05rem;padding:15px 36px;">無料体験授業に申し込む</a>
+  <div style="margin-top:16px;opacity:0.8;font-size:0.88rem">📞 048-949-1107　平日15:00〜21:30 ／ 土14:00〜20:00</div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="_layout.js"></script>
+<script src="_common.js"></script>
+</body>
+</html>

@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>【8月号】夏期講習と越谷北・越谷・越谷南を目指すための話｜城南コベッツ 三郷中央駅前教室</title>
+<link rel="stylesheet" href="_common.css">
+<style>
+.page-hero {
+  background: linear-gradient(135deg, #1A6B3C 0%, #2E9E58 50%, #F5C518 100%);
+  color: #fff; padding: 48px 24px; text-align: center; position: relative; overflow: hidden;
+}
+.page-hero::before {
+  content: '☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️☀️';
+  position: absolute; top: 6px; left: 0; right: 0;
+  font-size: 0.8rem; opacity: 0.15; letter-spacing: 6px;
+  white-space: nowrap; overflow: hidden;
+}
+.page-hero h1 { font-size: clamp(1.3rem,3.5vw,1.9rem); font-weight: 900; line-height: 1.4; }
+.page-hero .date { font-size: 0.8rem; opacity: 0.75; margin-top: 8px; }
+
+.msg-wrap { max-width: 760px; margin: 0 auto; }
+.msg-body { font-size: 0.97rem; line-height: 2.05; color: #2A2A2A; }
+.msg-body p { margin-bottom: 1.4em; }
+
+/* 夏期講習ボックス */
+.natsu-box {
+  background: linear-gradient(135deg, #1A6B3C, #2E9E58);
+  border-radius: 14px; padding: 28px; margin: 28px 0; color: #fff;
+}
+.natsu-box h3 { font-size: 1.1rem; font-weight: 900; margin-bottom: 16px; text-align: center; }
+.natsu-box h3 em { color: #F5C518; font-style: normal; }
+.natsu-items { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.natsu-item { background: rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 14px; }
+.natsu-item .ni-title { font-weight: 900; font-size: 0.9rem; margin-bottom: 4px; }
+.natsu-item .ni-desc { font-size: 0.78rem; opacity: 0.85; line-height: 1.6; }
+@media(max-width:480px){ .natsu-items{grid-template-columns:1fr;} }
+
+/* 高校データテーブル */
+.school-section { margin: 36px 0; }
+.school-header {
+  display: flex; align-items: center; gap: 12px;
+  background: var(--blue-d); color: #fff;
+  border-radius: 10px 10px 0 0; padding: 14px 18px;
+}
+.school-header .sh-name { font-size: 1.1rem; font-weight: 900; }
+.school-header .sh-hensachi {
+  background: #F5C518; color: #1A1A1A;
+  font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 900;
+  padding: 2px 12px; border-radius: 99px;
+}
+.school-body { border: 2px solid var(--blue-d); border-top: none; border-radius: 0 0 10px 10px; overflow: hidden; }
+.school-row { display: grid; grid-template-columns: 110px 1fr; border-bottom: 1px solid var(--light); }
+.school-row:last-child { border-bottom: none; }
+.school-row .sr-label { background: var(--blue-l); padding: 10px 12px; font-size: 0.8rem; font-weight: 700; color: var(--blue-d); display: flex; align-items: center; }
+.school-row .sr-val { padding: 10px 14px; font-size: 0.88rem; color: var(--ink); line-height: 1.7; }
+.school-comment { background: #FFF9E6; border-left: 3px solid #F5C518; padding: 12px 16px; margin-top: 10px; border-radius: 0 6px 6px 0; font-size: 0.88rem; color: #7A5F00; line-height: 1.75; }
+
+/* 募集状況 */
+.boshu-box {
+  background: linear-gradient(135deg, #0F3D7A, #1A5CA8);
+  border-radius: 14px; padding: 28px; margin: 28px 0; color: #fff;
+}
+.boshu-box h3 { font-size: 1rem; font-weight: 900; margin-bottom: 16px; text-align: center; }
+.boshu-box h3 em { color: #F5C518; font-style: normal; }
+.boshu-table { width: 100%; border-collapse: collapse; }
+.boshu-table th, .boshu-table td { padding: 9px 12px; text-align: center; font-size: 0.88rem; }
+.boshu-table th { background: rgba(255,255,255,0.15); font-weight: 700; }
+.boshu-table tr { border-bottom: 1px solid rgba(255,255,255,0.1); }
+.boshu-table tr:last-child { border-bottom: none; }
+.boshu-table .gl { text-align: left; font-weight: 700; }
+.boshu-table .num { font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 1.1rem; color: #F5C518; }
+.tag-ok  { background: #2E8B3A; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 99px; font-weight: 700; }
+.tag-few { background: #E8751A; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 99px; font-weight: 700; }
+.tag-end { background: #C0392B; color: #fff; font-size: 0.7rem; padding: 2px 8px; border-radius: 99px; font-weight: 700; }
+
+/* 強調 */
+.msg-point { background: var(--blue-l); border-left: 4px solid var(--blue); border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; color: var(--blue-d); font-weight: 700; }
+.msg-natsu { background: #E8F5EC; border-left: 4px solid #2E9E58; border-radius: 0 8px 8px 0; padding: 14px 18px; margin: 20px 0; font-size: 0.92rem; color: #1A6B3C; font-weight: 700; }
+
+/* 署名 */
+.signature { margin-top: 40px; padding-top: 24px; border-top: 2px solid var(--light); display: flex; align-items: center; gap: 16px; }
+.sig-icon { width: 56px; height: 56px; border-radius: 50%; background: linear-gradient(135deg,#1A5CA8,#0F3D7A); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+.sig-name { font-size: 0.95rem; font-weight: 900; }
+.sig-role { font-size: 0.75rem; color: var(--mid); margin-top: 2px; }
+
+/* 月ごとリンク */
+.monthly-nav { background: var(--light); border-radius: 12px; padding: 20px 24px; margin-top: 40px; }
+.monthly-nav h4 { font-size: 0.82rem; font-weight: 700; color: var(--mid); margin-bottom: 12px; }
+.monthly-links { display: flex; flex-wrap: wrap; gap: 8px; }
+.monthly-links a {
+  background: #fff; border: 1px solid var(--blue-l); color: var(--blue);
+  font-size: 0.82rem; padding: 6px 14px; border-radius: 99px;
+  font-weight: 700; transition: background 0.15s;
+}
+.monthly-links a:hover, .monthly-links a.current { background: var(--blue); color: #fff; }
+</style>
+</head>
+<body>
+<div id="nav-placeholder"></div>
+
+<div class="page-hero">
+  <span class="section-tag" style="background:rgba(255,255,255,0.2);color:#fff;margin-bottom:12px;display:inline-block;">📅 教室長からのメッセージ</span>
+  <h1>☀️ 8月号<br>夏期講習のこと、越谷北・越谷・越谷南を<br>目指すための話。</h1>
+  <div class="date">2025年8月 ／ 城南コベッツ 三郷中央駅前教室</div>
+</div>
+
+<section class="section">
+  <div class="section-inner">
+    <div class="msg-wrap">
+
+      <div class="msg-body reveal">
+
+        <p>こんにちは、城南コベッツ三郷中央駅前教室です。</p>
+
+        <p>8月になりました。<br>
+        中学3年生にとっては、<strong>この夏が受験の天王山</strong>です。<br>
+        正直に言います。夏休みに頑張った子と頑張らなかった子では、秋以降で本当に差がつきます。今月は夏の過ごし方と、三郷から狙える公立高校の話をします。</p>
+
+      </div>
+
+      <!-- 夏期講習 -->
+      <div class="natsu-box reveal">
+        <h3>☀️ 城南コベッツの<em>夏期講習 2025</em></h3>
+        <div class="natsu-items">
+          <div class="natsu-item">
+            <div class="ni-title">📅 期間</div>
+            <div class="ni-desc">7月下旬〜8月末<br>（曜日・時間は自由に設定）</div>
+          </div>
+          <div class="natsu-item">
+            <div class="ni-title">👤 形式</div>
+            <div class="ni-desc">1対2の個別指導<br>atama＋AI指導も対応</div>
+          </div>
+          <div class="natsu-item">
+            <div class="ni-title">📚 科目</div>
+            <div class="ni-desc">1科目〜5科目まで<br>苦手科目の集中克服OK</div>
+          </div>
+          <div class="natsu-item">
+            <div class="ni-title">🏫 自習室</div>
+            <div class="ni-desc">夏休み中も毎日開放<br>わからないところは即質問</div>
+          </div>
+          <div class="natsu-item">
+            <div class="ni-title">🎯 中3重点</div>
+            <div class="ni-desc">北辰テスト対策<br>苦手単元の総復習</div>
+          </div>
+          <div class="natsu-item">
+            <div class="ni-title">💰 費用</div>
+            <div class="ni-desc">体験授業は無料<br>詳細はお問い合わせを</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="msg-body reveal">
+        <p>夏期講習で大事なのは「量」よりも「的を絞ること」だと思っています。<br>
+        英語なら中1の単元に戻る。数学なら方程式・関数を固める。<br>
+        <strong>苦手を全部やろうとして全部中途半端</strong>になるのが一番もったいない。うちの教室では、最初の面談で優先順位を一緒に決めてから夏をスタートします。</p>
+
+        <div class="msg-natsu">
+          🌻 夏期講習からのご入会も大歓迎です。まずは無料体験授業（80分）からどうぞ。
+        </div>
+      </div>
+
+      <!-- 越谷北 -->
+      <div class="msg-body reveal">
+        <h2 style="font-size:1.2rem;font-weight:900;margin:32px 0 8px;padding-bottom:8px;border-bottom:3px solid var(--blue);">
+          📌 三郷から狙える高校を正直に解説します
+        </h2>
+        <p>三郷市から通いやすい公立高校として、よく名前が挙がるのが<strong>越谷北・越谷・越谷南</strong>の3校です。それぞれの違いと、合格するために何が必要かを話します。</p>
+      </div>
+
+      <!-- 越谷北 -->
+      <div class="school-section reveal">
+        <div class="school-header">
+          <div class="sh-name">越谷北高校（越北）</div>
+          <div class="sh-hensachi">偏差値 66〜68</div>
+        </div>
+        <div class="school-body">
+          <div class="school-row">
+            <div class="sr-label">通称・特徴</div>
+            <div class="sr-val">「越北」。SSH（スーパーサイエンスハイスクール）指定校。理数系が非常に強く、国公立大・MARCH以上への進学者が多数。</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">目安の内申点</div>
+            <div class="sr-val">普通科：中3内申 <strong>40以上</strong>が目安（3年間合計では155〜160前後）</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">当日点の目安</div>
+            <div class="sr-val">5科合計 <strong>450〜480点</strong>前後（満点500点）</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">北辰偏差値</div>
+            <div class="sr-val">継続して <strong>65以上</strong>が安心ライン</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">三郷からの通学</div>
+            <div class="sr-val">三郷中央駅→越谷駅 バス・自転車で通学可能。徒歩圏ではないが通塾実績あり。</div>
+          </div>
+        </div>
+        <div class="school-comment">
+          💬 越北を目指すなら、中2の内申が非常に重要です。内申40未満でも当日点で逆転できるケースはありますが、それには450点以上が必要。夏のうちに理数系の基礎を完璧にしておくことが最優先です。
+        </div>
+      </div>
+
+      <!-- 越谷 -->
+      <div class="school-section reveal">
+        <div class="school-header">
+          <div class="sh-name">越谷高校</div>
+          <div class="sh-hensachi">偏差値 60〜63</div>
+        </div>
+        <div class="school-body">
+          <div class="school-row">
+            <div class="sr-label">特徴</div>
+            <div class="sr-val">越谷エリアの中堅上位校。部活動も盛んで、文武両道を実現している生徒が多い。進学実績も安定している。</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">目安の内申点</div>
+            <div class="sr-val">中3内申 <strong>36〜38</strong>前後が目安</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">当日点の目安</div>
+            <div class="sr-val">5科合計 <strong>380〜420点</strong>前後</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">北辰偏差値</div>
+            <div class="sr-val"><strong>58〜62</strong>あたりが合格圏の目安</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">三郷からの通学</div>
+            <div class="sr-val">三郷中央駅から自転車または電車＋バスで30〜40分程度。</div>
+          </div>
+        </div>
+        <div class="school-comment">
+          💬 「越北には届かないけど、しっかりした高校に行きたい」という場合に現実的な選択肢。内申と当日点のバランスが大事です。内申が36あれば、当日380点で十分戦えます。
+        </div>
+      </div>
+
+      <!-- 越谷南 -->
+      <div class="school-section reveal">
+        <div class="school-header">
+          <div class="sh-name">越谷南高校</div>
+          <div class="sh-hensachi">偏差値 56〜60</div>
+        </div>
+        <div class="school-body">
+          <div class="school-row">
+            <div class="sr-label">特徴</div>
+            <div class="sr-val">普通科・外国語科の2学科。外国語科は英語教育に力を入れており、語学に強い高校。倍率が高く人気校。</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">目安の内申点</div>
+            <div class="sr-val">普通科：中3内申 <strong>34〜36</strong>。内申重視の傾向あり。</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">当日点の目安</div>
+            <div class="sr-val">5科合計 <strong>350〜380点</strong>前後（内申が高ければ当日点は低くてもOK）</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">北辰偏差値</div>
+            <div class="sr-val"><strong>54〜58</strong>が合格圏の目安</div>
+          </div>
+          <div class="school-row">
+            <div class="sr-label">倍率</div>
+            <div class="sr-val">普通科 <strong>1.4倍前後</strong>と高め。例年競争率が高い。（2024年度実績）</div>
+          </div>
+        </div>
+        <div class="school-comment">
+          💬 越谷南は「内申が高い子ほど有利」な入試傾向です。定期テストでしっかり点を取ることが合格への近道。倍率も高いので油断禁物。今の内申が34以下の場合は2学期の定期テストが勝負です。
+        </div>
+      </div>
+
+      <!-- 募集状況 -->
+      <div class="boshu-box reveal">
+        <h3>📊 8月現在の<em>学年別 在籍・残席状況</em></h3>
+        <table class="boshu-table">
+          <tr>
+            <th class="gl">学年</th>
+            <th>残り枠</th>
+            <th>状況</th>
+          </tr>
+          <tr>
+            <td class="gl">中学1年生</td>
+            <td><span class="num">若干名</span></td>
+            <td><span class="tag-ok">受付中</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.05)">
+            <td class="gl">中学2年生</td>
+            <td><span class="num">残りわずか</span></td>
+            <td><span class="tag-few">急いで</span></td>
+          </tr>
+          <tr>
+            <td class="gl">中学3年生</td>
+            <td><span class="num">夏期のみ</span></td>
+            <td><span class="tag-few">要相談</span></td>
+          </tr>
+          <tr style="background:rgba(255,255,255,0.05)">
+            <td class="gl">高校生</td>
+            <td><span class="num">若干名</span></td>
+            <td><span class="tag-ok">受付中</span></td>
+          </tr>
+        </table>
+        <p style="font-size:0.72rem;opacity:0.7;margin-top:12px;text-align:center;">※最新状況はお電話（048-949-1107）でご確認ください。</p>
+      </div>
+
+      <div class="msg-body reveal">
+        <p>最後に一言。</p>
+        <p>夏は「差をつけられる」季節であり、「差をつける」季節でもあります。<br>
+        どちらになるかは、今動けるかどうかだけです。</p>
+        <p>気になっている方は、まず電話か体験授業に来てみてください。<br>
+        無料で見てもらえる、それだけでいいんです。</p>
+        <p>お待ちしています！</p>
+      </div>
+
+      <div class="signature reveal">
+        <div class="sig-icon">👨‍🏫</div>
+        <div>
+          <div class="sig-name">城南コベッツ 三郷中央駅前教室</div>
+          <div class="sig-role">教室長より ／ 2025年8月</div>
+        </div>
+      </div>
+
+      <!-- 月別ナビ -->
+      <div class="monthly-nav reveal">
+        <h4>📅 月ごとのメッセージ一覧</h4>
+        <div class="monthly-links">
+          <a href="message_haru2025.html">3月｜春の新学期・中1中2募集</a>
+          <a href="message_202508.html" class="current">8月｜夏期講習・越谷3校</a>
+          <a href="#">9月｜（近日公開）</a>
+          <a href="#">10月｜（近日公開）</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="cta-bar">
+  <h2>☀️ 夏期講習、<em>まだ間に合います！</em></h2>
+  <p>無料体験授業から始められます。お気軽にどうぞ。</p>
+  <a href="trial.html" class="btn btn-primary">無料体験授業に申し込む</a>
+  <div style="margin-top:14px;font-size:0.88rem;opacity:0.8;">📞 048-949-1107　平日15:00〜21:30 ／ 土14:00〜20:00</div>
+</div>
+
+<div id="footer-placeholder"></div>
+<script src="_layout.js"></script><script src="_common.js"></script>
+</body>
+</html>
