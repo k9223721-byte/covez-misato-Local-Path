@@ -14,7 +14,7 @@ const NAV_HTML = `
     <a href="course.html">コース・料金</a>
     <a href="voice.html">合格実績・口コミ</a>
     <a href="trial.html">無料体験申込</a>
-    <a href="haru2025.html" style="color:#F5C518;border-color:#F5C518;">🌸春募集</a>
+    <a href="aki2025.html" style="color:#D4AF37;border-color:#D4AF37;">🍁秋期特訓</a>
   </div>
   <div class="nav-tel">
     <a href="tel:048-949-1107">048-949-1107</a>
@@ -44,7 +44,7 @@ const FOOTER_HTML = `
       <a href="course.html">コース・料金</a>
       <a href="voice.html">合格実績・口コミ</a>
       <a href="trial.html">無料体験申込</a>
-    <a href="haru2025.html" style="color:#F5C518;border-color:#F5C518;">🌸春募集</a>
+    <a href="aki2025.html" style="color:#D4AF37;border-color:#D4AF37;">🍁秋期特訓</a>
     </div>
   </div>
   <div class="footer-bottom">© 城南コベッツ 三郷中央駅前教室 / 株式会社城南進学研究社</div>

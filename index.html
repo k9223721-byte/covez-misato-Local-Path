@@ -62,41 +62,36 @@
 
 @media(max-width:600px){ .hero-points{grid-template-columns:1fr 1fr;} .stats-inner{flex-wrap:wrap;} .stat{flex:0 0 50%;border-right:none;border-bottom:1px solid #333;} }
 
-/* 春募集バナー */
-.haru-banner {
-  background: linear-gradient(135deg, #C0392B 0%, #E74C3C 50%, #E8751A 100%);
+/* 秋期 選抜制バナー */
+.aki-banner {
+  background: linear-gradient(135deg, #0B1B33 0%, #14284A 60%, #1A3A63 100%);
   padding: 20px 24px; position: relative; overflow: hidden;
+  border-top: 1px solid rgba(212,175,55,0.3); border-bottom: 1px solid rgba(212,175,55,0.3);
 }
-.haru-banner::before {
-  content: '🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸🌸';
-  position: absolute; top: 4px; left: 0; right: 0;
-  font-size: 0.7rem; letter-spacing: 4px; opacity: 0.2;
-  white-space: nowrap; overflow: hidden; pointer-events: none;
-}
-.haru-banner-inner {
+.aki-banner-inner {
   max-width: 960px; margin: 0 auto;
   display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
 }
-.haru-label {
-  background: #fff; color: #C0392B;
-  font-size: 0.72rem; font-weight: 900;
+.aki-label {
+  background: transparent; color: #D4AF37; border: 1px solid #D4AF37;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.06em;
   padding: 4px 12px; border-radius: 99px; white-space: nowrap;
 }
-.haru-text { color: #fff; font-size: 1rem; flex: 1; min-width: 200px; }
-.haru-grade {
-  background: #F5C518; color: #1A1A1A;
+.aki-text { color: #fff; font-size: 1rem; flex: 1; min-width: 200px; }
+.aki-grade {
+  background: #D4AF37; color: #0B1B33;
   font-weight: 900; padding: 1px 8px; border-radius: 4px;
   margin-right: 6px; font-size: 1.05rem;
 }
-.haru-text strong { font-size: 1.1rem; }
-.haru-sub { color: rgba(255,255,255,0.85); font-size: 0.78rem; width: 100%; margin-top: -8px; }
-.haru-btn {
-  background: #F5C518; color: #1A1A1A;
+.aki-text strong { font-size: 1.05rem; }
+.aki-sub { color: rgba(255,255,255,0.65); font-size: 0.78rem; width: 100%; margin-top: -8px; }
+.aki-btn {
+  background: #D4AF37; color: #0B1B33;
   font-weight: 900; font-size: 0.88rem;
   padding: 10px 20px; border-radius: 99px;
   white-space: nowrap; transition: transform 0.18s; text-decoration: none;
 }
-.haru-btn:hover { transform: scale(1.05); }
+.aki-btn:hover { transform: scale(1.05); }
 </style>
 </head>
 <body>
@@ -121,29 +116,6 @@
       <div class="hero-point"><span class="num">1対2</span><div class="lbl">完全個別指導スタイル</div></div>
       <div class="hero-point"><span class="num">0円</span><div class="lbl">入学金・無料体験授業</div></div>
     </div>
-  </div>
-</div>
-
-<!-- STATS -->
-<div class="stats">
-  <div class="stats-inner">
-    <div class="stat"><span class="stat-n">小〜高</span><div class="stat-l">全学年対応</div></div>
-    <div class="stat"><span class="stat-n">5科目</span><div class="stat-l">全教科指導</div></div>
-    <div class="stat"><span class="stat-n">振替OK</span><div class="stat-l">部活・習い事と両立</div></div>
-    <div class="stat"><span class="stat-n">自習室</span><div class="stat-l">無料開放</div></div>
-  </div>
-</div>
-
-<!-- 春募集バナー -->
-<div class="haru-banner">
-  <div class="haru-banner-inner">
-    <div class="haru-label">🌸 春の新学期 先行募集</div>
-    <div class="haru-text">
-      <span class="haru-grade">中1・中2生</span>限定
-      <strong>今なら入学金0円＋初月授業料半額！</strong>
-    </div>
-    <div class="haru-sub">新学期のスタートダッシュを城南コベッツで。残席わずか・先着順</div>
-    <a href="haru2025.html" class="haru-btn">詳しく見る・申し込む →</a>
   </div>
 </div>
 
@@ -194,6 +166,16 @@
   </div>
 </section>
 
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-inner">
+    <div class="stat"><span class="stat-n">小〜高</span><div class="stat-l">全学年対応</div></div>
+    <div class="stat"><span class="stat-n">5科目</span><div class="stat-l">全教科指導</div></div>
+    <div class="stat"><span class="stat-n">振替OK</span><div class="stat-l">部活・習い事と両立</div></div>
+    <div class="stat"><span class="stat-n">自習室</span><div class="stat-l">無料開放</div></div>
+  </div>
+</div>
+
 <!-- 口コミプレビュー -->
 <section class="section voices">
   <div class="section-inner">
@@ -224,6 +206,19 @@
     </div>
   </div>
 </section>
+
+<!-- 秋期 選抜制バナー -->
+<div class="aki-banner">
+  <div class="aki-banner-inner">
+    <div class="aki-label">🍁 選抜制 秋期特訓コース</div>
+    <div class="aki-text">
+      <span class="aki-grade">中1・中2生</span>限定
+      <strong>本気で内申点を上げたい子だけ、個別面談のうえご案内。</strong>
+    </div>
+    <div class="aki-sub">なんとなく通う子は募集していません。定期テスト＋25点保証つき。</div>
+    <a href="aki2025.html" class="aki-btn">詳しく見る・面談を申し込む →</a>
+  </div>
+</div>
 
 <!-- CTA -->
 <div class="cta-bar">
